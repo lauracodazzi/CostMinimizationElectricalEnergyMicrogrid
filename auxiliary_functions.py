@@ -30,7 +30,7 @@ def compare_alg(alg, i, time_limit):
         our_et_p = time.process_time()
     if alg == 3:
         our_st_p = time.process_time()
-        [cost, x, y, SOC, R, feas] = P4_fast(i) 
+        [cost, x, y, SOC, R, feas] = P4(i) 
         our_et_p = time.process_time()
     if alg == 4:
         our_st_p = time.process_time()

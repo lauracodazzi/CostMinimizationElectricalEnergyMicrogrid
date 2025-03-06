@@ -167,7 +167,10 @@ def P2(i):
         else:
             c[t] = i.p_sell[t//2]            
             en[t] = max(0, i.energy[t//2] - i.demand[t//2])
-            betas[t//2] = i.capacity - max(0, i.demand[t//2]-i.energy[t//2])+en[t]
+            # betas[t//2] = i.capacity - max(0, i.demand[t//2]-i.energy[t//2])+en[t]
+            # betas[t//2] = max(0, i.capacity - max(0, i.demand[t//2]-i.energy[t//2])+en[t])
+            betas[t//2] = i.capacity + i.energy[t//2]
+            # betas[t//2] = max(0, i.capacity - i.demand[t//2] + i.energy[t//2])
 #            betas[t//2] = i.capacity +en[t]
 #            betas[t//2] = i.capacity + max(en[t], i.demand[t//2]-i.energy[t//2])
             dem[t] = betas[t//2]

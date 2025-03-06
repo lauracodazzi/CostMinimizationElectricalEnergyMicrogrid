@@ -41,8 +41,8 @@ skip = 195
 #   3:  PEACS-BS
 #   4:  PEACS-B-Ex
 #   5:  PEACS-BS-Ex
-algs = [0]
-# algs = [0,1,2,3]
+
+algs = [1]
 
 # Parameter to set the upper bound of the simulated capacity. Instances will
 # be generated from a uniform distribution with support [0, capacity]
